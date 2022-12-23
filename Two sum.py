@@ -12,6 +12,27 @@ Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].'''
 
+''' #this is second solution with o(n) complexity
+class Solution:
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        for i in range(len(nums)):
+            another = target - nums[i]
+            if another in nums:
+                try:
+                    j = nums.index(another)
+                    if i != j:
+                        return [i, j]
+                except ValueError as e:
+                    # There has no item in list
+                    continue
+        return []
+        '''
+
 class Solution(object):
     def twoSum(self, nums, target):
         """
