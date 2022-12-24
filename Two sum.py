@@ -31,7 +31,7 @@ class Solution:
                     # There has no item in list
                     continue
         return []
-        '''
+                   '''
 
 class Solution(object):
     def twoSum(self, nums, target):
