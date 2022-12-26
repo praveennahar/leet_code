@@ -36,18 +36,18 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        m = n
-        mask =0
+        m = n   #make a temporary variable
+        mask =0  # create a mask variable with 0
 
         if m==0:
             return 1
 
-        while(m!=0):
-            mask = (mask<<1) | 1
-            m = m>>1
-
-        ans = (~n) & mask
-        return ans
+        while(m!=0):            #It will run until our bits is not zero
+            mask = (mask<<1) | 1    #32 bits ko pehle left shift karenge then or operator se last me add karte jayege
+            m = m>>1            #number ko right shift karke zero bana denge
+        #Now this is the main formula
+        ans = (~n) & mask       #firstly me fine a numbers compliment then add mask variable by & operator
+        return ans    #finally it's gives a answer
 
 a=Solution()
 print(a.bitwiseComplement(5))
