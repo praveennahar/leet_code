@@ -19,7 +19,7 @@ Example 3:
 Input: n = 3
 Output: false'''
 
-class Solution(object):
+''''class Solution(object):
     def isPowerOfTwo(self, n):
         """
         :type n: int
@@ -32,3 +32,24 @@ class Solution(object):
                  return True # True in c++ is small true and false also 
         
         return False #after end of loop if number is not equal to power of two than it'll return false it cann't be put inside the loop 
+'''
+
+#Best solution of this question is :
+
+class Solution(object):
+    def isPowerOfTwo(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        if n <= 0:
+            return False
+        if n == 1:
+            return True
+        if n % 2 == 0:
+            return self.isPowerOfTwo(n // 2) # we use recursion here without using loop
+        else:
+            return False
+
+a=Solution()
+print(a.isPowerOfTwo(7))
