@@ -29,6 +29,6 @@ class Solution(object):
             ans = pow(2,i) #pow function is also present in c++ and use same as python
 
             if ans == n:    #it will check if after every iteration if number is equal of a power of two then it will return true
-                 return True
+                 return True # True in c++ is small true and false also 
         
         return False #after end of loop if number is not equal to power of two than it'll return false it cann't be put inside the loop 
