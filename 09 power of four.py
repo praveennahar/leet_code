@@ -21,7 +21,6 @@ Example 3:
 
 Input: n = 1
 Output: true
- 
 
 Constraints:
 
