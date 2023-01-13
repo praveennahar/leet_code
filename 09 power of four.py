@@ -40,3 +40,9 @@ class Solution(object):
             return self.isPowerOfFour(n//4)
         else:
             return False
+
+
+a = [2,3,2,9,7,8,5,3,7,10]
+
+a.sort()
+
