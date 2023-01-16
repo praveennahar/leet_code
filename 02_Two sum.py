@@ -33,15 +33,20 @@ class Solution:
         return []
                    '''
 
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+# class Solution(object):
+#     def twoSum(self, nums, target):
+#         """
+#         :type nums: List[int]
+#         :type target: int
+#         :rtype: List[int]
+#         """
         
-        for i in range (len(nums)):
-            for j in range (i+1,len(nums)):
-                if nums[i]+nums[j] == target:
-                    return [i,j]
+#         for i in range (len(nums)):
+#             for j in range (i+1,len(nums)):
+#                 if nums[i]+nums[j] == target:
+#                     return [i,j]
+
+
+#Your code goes here
+L, B =  input().split()
+print(int(L)*int(B))
