@@ -43,6 +43,7 @@ class Solution:
             j+=1
         return nums
 
+
 s = Solution()
 nums = [0,1,0,3,12]
 print(s.moveZeroes(nums))
