@@ -46,8 +46,6 @@ class Solution:
 #                 if nums[i]+nums[j] == target:
 #                     return [i,j]
 
-
-
-#Your code goes here
-L, B =  input().split()
-print(int(L)*int(B))
+a= 9
+b=8
+swap(a,b)
