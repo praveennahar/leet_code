@@ -39,25 +39,27 @@
 # 1 <= part.length <= 1000
 # s​​​​​​ and part consists of lowercase English letters.
 
-class Solution:
-    def removeOccurrences(self, s, part):
-        while part in s:
-            # print(s)
-            s= s.replace(part,"",1) 
-            '''First argument is remove a which part we want to remaove
-            second argument is what we want to add on that removing place
-            third argument is how much count we want to remove in this case we only want to remove one time 
-            '''
-        return s
+# class Solution:
+#     def removeOccurrences(self, s, part):
+#         while part in s:
+#             # print(s)
+#             s= s.replace(part,"",1) 
+#             '''First argument is remove a which part we want to remaove
+#             second argument is what we want to add on that removing place
+#             third argument is how much count we want to remove in this case we only want to remove one time 
+#             '''
+#         return s
 
 # this one is second approach 
 
-# class Solution:
-#     def removeOccurrences(self, s: str, part: str) -> str:
-#         while part in s:
-#             indx = s.index(part)
-#             s = s[:indx] + s[indx+len(part):] # this is need to learn what we done in it
-#         return s
+class Solution:
+    def removeOccurrences(self, s, part) :
+        while part in s:
+            indx = s.index(part)
+            # print(s)
+            # print(indx)
+            s = s[:indx] + s[indx+len(part):] # this is need to learn what we done in it
+        return s
 
 
 a = Solution()
