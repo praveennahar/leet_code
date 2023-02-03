@@ -54,3 +54,9 @@ class Solution:
 
 s1 = Solution()
 print()
+
+
+def f(a,b,c=1,d=7):
+    return a+b+c+d
+
+print(f(1,2,d=5))
