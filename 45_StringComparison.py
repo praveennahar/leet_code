@@ -39,24 +39,25 @@
 # 1 <= chars.length <= 2000
 # chars[i] is a lowercase English letter, uppercase English letter, digit, or symbol.
 
-class Solution:
-    def compress(self, chars: List[str]) -> int:
-        count = 1
-        for i in range(len(chars)-1,-1,-1):
-            if i and chars[i]==chars[i-1]:
-                count += 1
-                chars.pop(i)
-            else:
-                if count>1:
-                    for item in str(count)[::-1]:
-                        chars.insert(i+1, item)
-                    count = 1
+# class Solution:
+#     def compress(self, chars):
+#         count = 1
+#         for i in range(len(chars)-1,-1,-1):
+#             if i and chars[i]==chars[i-1]:
+#                 count += 1
+#                 chars.pop(i)
+#             else:
+#                 if count>1:
+#                     for item in str(count)[::-1]:
+#                         chars.insert(i+1, item)
+#                     count = 1
 
-s1 = Solution()
-print()
+# s1 = Solution()
+# print()
 
-
-def f(a,b,c=1,d=7):
+##################################################
+def f(a,b,c=1,d=5):
     return a+b+c+d
 
-print(f(1,2,d=5))
+print(f(1,2,c=7))
+################################################################
