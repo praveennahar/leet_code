@@ -48,6 +48,7 @@ class Solution:
         return result
 
 # 2nd approach
+
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         res = []
