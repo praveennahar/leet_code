@@ -32,16 +32,16 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution:
-    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        # if head is None : return head
+# class Solution:
+#     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+#         # if head is None : return head
 
-        curr = head
-        while curr:
-            while curr.next and curr.val == curr.next.val:
-                curr.next = curr.next.next
-            curr = curr.next    
-        return head
+#         curr = head
+#         while curr:
+#             while curr.next and curr.val == curr.next.val:
+#                 curr.next = curr.next.next
+#             curr = curr.next    
+#         return head
 
 
 
@@ -55,15 +55,12 @@ class Solution:
 #         self.val = val
 #         self.next = next
 class Solution:
-    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def deleteDuplicates(self, head):
         if not head : return None
-
         temp = head
         while temp.next:
-            
             if temp.val == temp.next.val:
-                temp.next = temp.next.next
-                
+                temp.next = temp.next.next   
             else:
                 temp = temp.next
             # head = temp        
