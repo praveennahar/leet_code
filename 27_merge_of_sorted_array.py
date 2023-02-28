@@ -40,7 +40,7 @@
 # 1 <= m + n <= 200
 # -109 <= nums1[i], nums2[j] <= 109
  
- 
+
 
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
@@ -55,6 +55,10 @@ class Solution(object):
         j=0
         k=0
         temp = nums1.copy()
+        temp1 = nums1.copy()
+        # print(temp)
+        # print(nums1)
+        # print(temp1)
         while(i<m and j<n):
             if(temp[i] < nums2[j]):
                 nums1[k]=temp[i]
