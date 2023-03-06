@@ -76,7 +76,7 @@ for i in range(Num):
     LL1.add_begin(d)
 
 LL1.print_LL()   # This method calling for printing the Linked List
-l1 = LL1.head   # We are make a copy of First object of Linked List
+head = LL1.head   # We are make a copy of First object of Linked List
 
 
 # This is the leetcode class for using remove the element
@@ -99,5 +99,5 @@ class Solution:
 
 s1 = Solution()
 remove = int(input('Which Node you want to remove in the Linked List : '))
-LL2 = LinkedList(s1.removeElements(l1,remove))   # Here We are making 2nd object of linked list
+LL2 = LinkedList(s1.removeElements(head,remove))   # Here We are making 2nd object of linked list
 LL2.print_LL()
