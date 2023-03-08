@@ -65,3 +65,19 @@ class Solution:
         node.val = node.next.val
         node.next = node.next.next
         
+
+
+
+# c++ Solution
+# /**
+#
+# class Solution {
+# public:
+#     void deleteNode(ListNode* node) {
+#         ListNode* next_node = node->next;
+#         node->val = next_node->val;
+#         node->next = next_node->next;
+#         next_node->next = NULL;
+#         delete next_node;
+#     }
+# };

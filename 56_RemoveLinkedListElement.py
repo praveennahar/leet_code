@@ -81,23 +81,42 @@ head = LL1.head   # We are make a copy of First object of Linked List
 
 # This is the leetcode class for using remove the element
 class Solution:
-    def removeElements(self, head, val):
-        dummy = ListNode(next = head)
-        prev,curr,forward = dummy, head, None
+    # def removeElements(self, head, val):
+    #     dummy = ListNode(next = head)
+    #     prev,curr,forward = dummy, head, None
 
-        while curr :
-            forward = curr.next
+    #     while curr :
+    #         forward = curr.next
 
-            if curr.data == val:
-                prev.next = forward
-            else:
+    #         if curr.data == val:
+    #             prev.next = forward
+    #         else:
+    #             prev = curr
+    #         curr = forward
+    #     return dummy.next # we are sending dummy.next bcz if our head is the same                   
+    #                     #value we need to delete so that case It will return a Null .
+        
+    def deleteAtPosition(self,head,position):
+        if position == 1:
+            head = head.next 
+        else:
+            prev = ListNode(next=head)
+            curr = ListNode(next=head)
+            cnt = 1
+            while(cnt < position):
                 prev = curr
-            curr = forward
-        return dummy.next # we are sending dummy.next bcz if our head is the same                   
-                        #value we need to delete so that case It will return a Null .
+                curr = curr.next 
+                cnt+=1
+
+            prev.next = curr.next 
+            print(head.data)
+
 
 
 s1 = Solution()
-remove = int(input('Which Node you want to remove in the Linked List : '))
-LL2 = LinkedList(s1.removeElements(head,remove))   # Here We are making 2nd object of linked list
+# remove = int(input('Which Node you want to remove in the Linked List : '))
+# LL2 = LinkedList(s1.removeElements(head,remove))   # Here We are making 2nd object of linked list
+# LL2.print_LL()
+LL2 = LinkedList(s1.deleteAtPosition(head,1))
+print(LL2.head)
 LL2.print_LL()
