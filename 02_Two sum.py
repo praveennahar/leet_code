@@ -49,3 +49,7 @@ class Solution:
         #         if nums[i]+nums[j] == target:
         #             return [i,j]
 
+
+sourceFile = open('Praveen.txt','w') # w=write,a=append,r=read,+ = read and write
+print('helo','world',sep=',',end='',file=sourceFile,flush=False)
+sourceFile.close()
