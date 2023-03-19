@@ -17,8 +17,8 @@ Explanation: From left to right, it reads -121. From right to left, it becomes 1
 
 
 
-class Solution(object):
-    def isPalindrome(self, x:int):
+# class Solution(object):
+def isPalindrome(x:int):
         """
         :type x: int
         :rtype: bool
@@ -34,4 +34,4 @@ class Solution(object):
         else:
             return False
 
-    print(isPalindrome(121))
+print(isPalindrome(121))
