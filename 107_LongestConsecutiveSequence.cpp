@@ -21,6 +21,7 @@ public:
                 longest = max(longest, current);
             }
         }
+        
         return longest;
     }
 };
